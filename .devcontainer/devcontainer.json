@@ -1,5 +1,5 @@
 {
-    "name": "wikinit devcontainer",
+    "name": "wikinit",
     "dockerComposeFile": "docker-compose.development.yml",
     "service": "app",
     "workspaceFolder": "/wikinit",
