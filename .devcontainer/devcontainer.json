@@ -2,7 +2,7 @@
     "name": "wikinit devcontainer",
     "dockerComposeFile": "docker-compose.development.yml",
     "service": "app",
-    "workspaceFolder": "/workspace",
+    "workspaceFolder": "/wikinit",
     "customizations": {
         "vscode": {
             "extensions": [
