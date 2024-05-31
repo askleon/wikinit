@@ -1,0 +1,22 @@
+{
+  "name": "wikinit",
+  "module": "app/main.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot app/main.ts"
+  },
+  "prisma": {
+    "seed": "bun scripts/seed.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "5.14.0",
+    "hono": "^4.4.2",
+    "prisma": "^5.14.0"
+  }
+}

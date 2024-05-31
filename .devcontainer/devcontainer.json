@@ -1,0 +1,15 @@
+{
+    "name": "wikinit devcontainer",
+    "dockerComposeFile": "docker-compose.development.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "oven.bun-vscode",
+                "Prisma.prisma"
+            ]
+        }
+    },
+    "forwardPorts": [ 5432 ]
+}
