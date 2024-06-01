@@ -11,17 +11,12 @@ services:
   db:
     image: postgres:13
     restart: always
-    secrets:
-      - POSTGRES_PASSWORD
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: /run/secrets/POSTGRES_PASSWORD
+      POSTGRES_PASSWORD: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
-secrets:
-  POSTGRES_PASSWORD:
-    file: .env.development     
 volumes:
   postgres-data:
