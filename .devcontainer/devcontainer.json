@@ -11,5 +11,6 @@
             ]
         }
     },
-    "forwardPorts": [ 5432 ]
+    "forwardPorts": [ 5432 ],
+    "postCreateCommand": "bun prisma migrate dev --name init && bun prisma generate && bun prisma db seed"
 }
