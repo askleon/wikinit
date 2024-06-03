@@ -1,6 +1,5 @@
 import { PrismaClient } from '@prisma/client';
 import { Hono } from 'hono'
-import type { equal } from 'hono/utils/buffer';
 
 const client = new PrismaClient()
 
