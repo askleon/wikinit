@@ -20,13 +20,12 @@ type ArticleQuery = {
 
 app.get('/articles', async (c) => {
   const q: ArticleQuery = c.req.query()
-
   const fromDate = q.from ? new Date(q.from) : undefined
   const toDate = q.to ? new Date(q.to) : undefined
 
   const articles = await client.articles.findMany({
     where: {
-      id: q.id,
+      id: Number(q.id),
       title: q.title ? { contains: q.title } : undefined,
       content: q.content ? { contains: q.content } : undefined,
       description: q.description ? { contains: q.description } : undefined,
