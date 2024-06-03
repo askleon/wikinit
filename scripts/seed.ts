@@ -34,11 +34,14 @@ const seed = async (articles: any) => {
     }
 }
 
-console.log('Seeding...')
-seed(articlesToCreate)
-    .then(() => console.log('Seed completed'))
-    .catch((error) => console.error(error))
-    .finally(async () => {
-        await client.$disconnect()
-        console.log('db.client Disconnected')
-    })
+console.log('Seeding...');
+
+try {
+    await seed(articlesToCreate);
+    console.log('Seed completed');
+} catch (error) {
+    console.error(error);
+} finally {
+    await client.$disconnect();
+    console.log('db.client Disconnected');
+}
