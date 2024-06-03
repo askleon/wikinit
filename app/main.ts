@@ -25,7 +25,7 @@ app.get('/articles', async (c) => {
 
   const articles = await client.articles.findMany({
     where: {
-      id: Number(q.id),
+      id: q.id ? Number(q.id) : undefined,
       title: q.title ? { contains: q.title } : undefined,
       content: q.content ? { contains: q.content } : undefined,
       description: q.description ? { contains: q.description } : undefined,
